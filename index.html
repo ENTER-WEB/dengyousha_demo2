@@ -21,7 +21,7 @@
             }
 
             .staticrypt-page {
-                width: 360px;
+                width: min(420px, calc(100% - 32px));
                 padding: 8% 0 0;
                 margin: auto;
                 box-sizing: border-box;
@@ -30,32 +30,36 @@
             .staticrypt-form {
                 position: relative;
                 z-index: 1;
-                background: #ffffff;
-                max-width: 360px;
+                background: rgba(255, 255, 255, 0.96);
+                max-width: 420px;
                 margin: 0 auto 100px;
-                padding: 45px;
+                padding: 42px 40px;
                 text-align: center;
-                box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+                border: 1px solid #DDE7E1;
+                border-radius: 18px;
+                box-shadow: 0 20px 60px rgba(0, 56, 32, 0.14);
             }
 
             .staticrypt-form input[type="password"],
             input[type="text"] {
-                background: inherit;
-                border: 0;
+                background: #F7FAF8;
+                border: 1px solid #DDE7E1;
+                border-radius: 999px;
                 box-sizing: border-box; /* This ensures padding is included in the total width */
-                font-size: 14px;
+                color: #1A1A1A;
+                font-size: 15px;
                 outline: 0;
-                padding: 15px 30px 15px 15px; /* Adjust the padding to ensure there is space for the icon */
+                padding: 15px 48px 15px 18px; /* Adjust the padding to ensure there is space for the icon */
                 width: 100%;
             }
 
             .staticrypt-password-container {
                 position: relative;
                 outline: 0;
-                background: #f2f2f2;
+                background: transparent;
                 width: 100%;
                 border: 0;
-                margin: 0 0 15px;
+                margin: 0 0 18px;
                 box-sizing: border-box;
             }
 
@@ -65,21 +69,23 @@
                 opacity: 60%;
                 padding: 13px;
                 position: absolute;
-                right: 0;
+                right: 14px;
                 top: 50%;
                 transform: translateY(-50%);
                 width: 20px;
             }
 
             .staticrypt-form .staticrypt-decrypt-button {
-                text-transform: uppercase;
+                text-transform: none;
                 outline: 0;
                 background: #006B3F;
                 width: 100%;
                 border: 0;
+                border-radius: 999px;
                 padding: 15px;
                 color: #ffffff;
-                font-size: 14px;
+                font-size: 15px;
+                font-weight: 700;
                 cursor: pointer;
             }
 
@@ -102,19 +108,34 @@
             .staticrypt-content {
                 height: 100%;
                 margin-bottom: 1em;
-                background: #EAF4EF;
-                font-family: "Arial", sans-serif;
+                background:
+                    radial-gradient(circle at 18% 18%, rgba(0, 107, 63, 0.12), transparent 30%),
+                    linear-gradient(135deg, #F7FAF8 0%, #EAF4EF 100%);
+                font-family: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", sans-serif;
                 -webkit-font-smoothing: antialiased;
                 -moz-osx-font-smoothing: grayscale;
             }
 
             .staticrypt-instructions {
-                margin-top: -1em;
-                margin-bottom: 1em;
+                margin-top: 0;
+                margin-bottom: 1.2em;
+                color: #555555;
+                line-height: 1.8;
             }
 
             .staticrypt-title {
-                font-size: 1.5em;
+                margin: 14px 0 10px;
+                color: #004D2F;
+                font-size: 1.55em;
+                font-weight: 800;
+            }
+
+            .staticrypt-logo {
+                display: block;
+                width: 210px;
+                max-width: 82%;
+                height: auto;
+                margin: 0 auto 14px;
             }
 
             label.staticrypt-remember {
@@ -183,6 +204,7 @@
             <div class="staticrypt-page">
                 <div class="staticrypt-form">
                     <div class="staticrypt-instructions">
+                        <img class="staticrypt-logo" src="images/logo.png" alt="株式会社 電業社" />
                         <p class="staticrypt-title">DENGYOSHA DEMO</p>
                         <p>パスワードを入力してください。</p>
                     </div>
