@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "encrypt": "staticrypt index.html --remember 7 --short --template-color-primary \"#006B3F\" --template-color-secondary \"#EAF4EF\" --template-title \"DENGYOSHA DEMO\" --template-instructions \"パスワードを入力してください。\" --template-button \"表示する\" --template-placeholder \"パスワード\" --template-error \"パスワードが違います\" --template-remember \"この端末で記憶する\"",
+    "encrypt:env": "staticrypt index.html --remember 7 --short --template-color-primary \"#006B3F\" --template-color-secondary \"#EAF4EF\" --template-title \"DENGYOSHA DEMO\" --template-instructions \"パスワードを入力してください。\" --template-button \"表示する\" --template-placeholder \"パスワード\" --template-error \"パスワードが違います\" --template-remember \"この端末で記憶する\""
+  },
+  "devDependencies": {
+    "staticrypt": "^3.5.0"
+  }
+}
